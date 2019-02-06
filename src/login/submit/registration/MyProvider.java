@@ -1,8 +1,8 @@
 package login.submit.registration ;
  public interface MyProvider{
-	 String email = "aa@bb.com";
-	 String pass = "test123";
-	 String connurl = "jdbc:sql://localhost:5432/loginDB";
+	 String email = "root";
+	 String pass = "lobna1997";
+	 String connurl = " jdbc:mysql://localhost:3306/logindb";
 			 
 	 
  }

@@ -1,4 +1,4 @@
-package login.submit.registration;
+package com.test.servlets;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,17 +7,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import login.submit.registration.UserImplementation;
+import login.submit.registration.UserInterface;
+import login.submit.registration.Users;
+
 /**
- * Servlet implementation class LoginRegister
+ * Servlet implementation class loginServlet
  */
-@WebServlet("/loginRegister")
-public class LoginRegister extends HttpServlet {
+@WebServlet("/loginServlet")
+public class loginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LoginRegister() {
+    public loginServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,7 +38,7 @@ public class LoginRegister extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		UserInterface uu = new UserImplementation();
+UserInterface uu = new UserImplementation();
 
 		
 		String email = request.getParameter("email" );
@@ -46,4 +50,5 @@ public class LoginRegister extends HttpServlet {
 		request.getRequestDispatcher("welcome.jsp").forward(request, response);
 	
 	}
+
 }

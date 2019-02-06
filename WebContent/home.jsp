@@ -11,7 +11,6 @@
 <!-- Include JS File Here -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript" src="registeration.js"></script>
 
 <title>LoginRegister</title>
 
@@ -21,10 +20,9 @@
 </div>
 <body>
 <div class="center">
-            <form id="RegisterLogin" action="LoginRegister" name="login" onsubmit="return ShowResults()">
+          
 
-
-<form name="RegForm" action="FirstServlet" method="post" >
+<form  action="RegisterServlet" method="post" >
 
 		<div class="input-group">
       <label>Username</label>	
@@ -44,16 +42,16 @@
     </div>
     
     <label>Birth date</label>
- <input type="date" name="bday">
+ <input type="date" name="DOB">
     
     <div class="input-group">
       <label>Address</label>
-      <input type="password" name="address" id="address" placeholder="enter your address">
+      <input type="text" name="address" id="address" placeholder="enter your address">
     </div>
 			
 			 <div class="input-group">
       <label>Contact Number</label>
-      <input type="text" name="contact" id="contact" placeholder="enter your mobile number">
+      <input type="text" name="contact" id="contact"  placeholder="enter your mobile number">
     </div>
     
       <label>Department</label>
@@ -70,13 +68,14 @@
 			<br>
 			<br>
 			<br>
-			<input type="button" class="btn" name="register" id="submit_btn" value="submit">
+			<input type="submit" class="btn" name="submit" id="submit_btn" value="submit">
    	 <br> 
    	    		 
     <p>
         Already a member? <a href="login.jsp">Sign in</a>
     </p>
 	
-
+</form>
+</div>
 </body>
 </html>

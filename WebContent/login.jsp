@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="center">
-            <form id="sign_up_form" action="home.html" name="login" onsubmit="return ShowResults()">
+            <form id="sign_up_form" action="loginServlet" name="login" >
 
                 <div class="sign_up_input" >
                     

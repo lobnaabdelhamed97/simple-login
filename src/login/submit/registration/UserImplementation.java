@@ -22,14 +22,14 @@ public class UserImplementation implements UserInterface {
 			//get the connection
 			conn=ConnectionProvider.getConn();
 			//inserting in db by the sql command in "" where the table name is users
-			ps=conn.prepareStatement("insert into users values(?,?,?,?,?)");
+//			ps=conn.prepareStatement("insert into users values(?,?,?,?,?,?)");
 			//passing parameters
-			ps.setString(1, u.getEmail());
-			ps.setString(2,u.getPassword());
-			ps.setString(3,u.getContact());
+			ps.setString(2, u.getUsername());
+			ps.setString(3,u.getPassword());
 			ps.setString(4, u.getDOB());
-			ps.setString(5, u.getUsername());
-			ps.setString(6, u.getAddress());
+			ps.setString(5, u.getAddress());
+			ps.setString(6,u.getContact());
+			ps.setString(7, u.getEmail());
 			status= ps.executeUpdate();
 			conn.close();
 			
