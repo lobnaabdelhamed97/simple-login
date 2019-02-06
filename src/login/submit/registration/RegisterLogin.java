@@ -1,27 +1,21 @@
-package com.test.login;
+package login.submit.registration;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import login.submit.registration.UserImplementation;
-import login.submit.registration.UserInterface;
-import login.submit.registration.Users;
-
 /**
- * Servlet implementation class loginServlet
+ * Servlet implementation class RegisterLogin
  */
-@WebServlet("/loginServlet")
-public class loginServlet extends HttpServlet {
+public class RegisterLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public loginServlet() {
+    public RegisterLogin() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -40,15 +34,26 @@ public class loginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 UserInterface uu = new UserImplementation();
 
+String Uname = request.getParameter("username" );
+String email = request.getParameter("email" );
+String password = request.getParameter("password");
+String contact = request.getParameter("contact");
+String address = request.getParameter("address");
+
+String dob = request.getParameter("DOB");
+
+Users u =new Users(email,password,Uname,dob,contact,address) ;
+
+
+uu.insertUser(u);
+
+request.setAttribute("message", u.getEmail());
+request.getRequestDispatcher("welcome.jsp").forward(request, response);
+
+
+
 		
-		String email = request.getParameter("email" );
-		String password = request.getParameter("password" );
 		
-		//object from userinterface to deal with user implementation
-		Users u = uu.getUsers(email, password);
-		request.setAttribute("message", u.getEmail());
-		request.getRequestDispatcher("welcome.jsp").forward(request, response);
-	
-	}
+		}
 
 }
