@@ -4,51 +4,73 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<!-- Include CSS File Here -->
+<link rel="stylesheet" type="text/css" href="style.css">
+ 
+<!-- Include JS File Here -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="registeration.js"></script>
+
 <title>LoginRegister</title>
 </head>
+<div class="header">
+    <h1>Register</h1>
+</div>
 <body>
 
-<form action="FirstServlet" method="post">
-<table style="with: 100%">
-<tr>
+<form name="RegForm" action="FirstServlet" method="post" >
 
-					<td>Email</td>
-					<td><input type="text" name="loginmail" /></td>
-				</tr>
-				<tr>
-					<td>Password</td>
-					<td><input type="password" name="loginpass" /></td>
-					
-				</tr>
-</table>
-			<table style="with: 50%">
-				<tr>
-					<td>First Name</td>
-					<td><input type="text" name="first_name" /></td>
-				</tr>
-				<tr>
-					<td>Last Name</td>
-					<td><input type="text" name="last_name" /></td>
-				</tr>
-				<tr>
-					<td>UserName</td>
-					<td><input type="text" name="username" /></td>
-				</tr>
-				
+		<div class="input-group">
+      <label>Username</label>	
+					<input type="text" name="username" id="name" placeholder="enter your name">
+				 </div>
+			<div class="input-group">
+      <label>Email</label>
+      <input type="email" name="email" id="email" placeholder="enter your email">
+    </div>
+    <div class="input-group">
+      <label>Password</label>
+      <input type="password" name="password" id="password" placeholder="enter your password">
+    </div>
+    <div class="input-group">
+      <label>Confirm password</label>
+      <input type="password" name="cpassword" id="cpassword" placeholder="enter the same password">
+    </div>
+    
+    <label>Birth date</label>
+ <input type="date" name="bday">
+    
+    <div class="input-group">
+      <label>Address</label>
+      <input type="password" name="address" id="address" placeholder="enter your address">
+    </div>
 			
-				<tr>
-					<td>Address</td>
-					<td><input type="text" name="address" /></td>
-				</tr>
-				<tr>
-					<td>Contact No</td>
-					<td><input type="text" name="contact" /></td>
-				</tr></table>
-			<input type="submit" value="Submit" /></form>
+			 <div class="input-group">
+      <label>Contact Number</label>
+      <input type="text" name="contact" id="contact" placeholder="enter your mobile number">
+    </div>
+    
+      <label>Department</label>
+      <select name="department">
+  <option value="production">Production</option>
+  <option value="marketing">Marketing</option>
+  <option value="accounting">Accounting and Finance</option>
+  <option value="research">Research and Development</option>
+    <option value="purchasing">Purchasing</option>
+    <option value="hr">Human Resource Management</option>
+</select>
 			<br>
-			
 			<br>
-			<a href="login.jsp"> Already a member ?</a>
+			<br>
+			<br>
+			<br>
+			<input type="button" class="btn" name="register" id="register" value="Register">
+   	 <br> 
+   	    		 
+    <p>
+        Already a member? <a href="login.jsp">Sign in</a>
+    </p>
 	
 </body>
 </html>

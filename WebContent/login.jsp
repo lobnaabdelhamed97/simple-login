@@ -11,11 +11,7 @@
             <form id="sign_up_form" action="home.html" name="login" onsubmit="return ShowResults()">
 
                 <div class="sign_up_input" >
-                    <label> Username </label>
-                    <br>
-                    <input type="text" name="Name" id="Name_signup" required>
-                    <span id="name_status"></span>
-                    <br>
+                    
                     <label> Email</label>
                     <br>
                     <input type="email" name="email">
