@@ -1,8 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <!-- Include CSS File Here -->
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -13,17 +14,21 @@
 <script type="text/javascript" src="registeration.js"></script>
 
 <title>LoginRegister</title>
+
 </head>
 <div class="header">
     <h1>Register</h1>
 </div>
 <body>
+<div class="center">
+            <form id="RegisterLogin" action="LoginRegister" name="login" onsubmit="return ShowResults()">
+
 
 <form name="RegForm" action="FirstServlet" method="post" >
 
 		<div class="input-group">
       <label>Username</label>	
-					<input type="text" name="username" id="name" placeholder="enter your name">
+					<input type="text" name="username" id="Name_signup" placeholder="enter your name">
 				 </div>
 			<div class="input-group">
       <label>Email</label>
@@ -65,12 +70,13 @@
 			<br>
 			<br>
 			<br>
-			<input type="button" class="btn" name="register" id="register" value="Register">
+			<input type="button" class="btn" name="register" id="submit_btn" value="submit">
    	 <br> 
    	    		 
     <p>
         Already a member? <a href="login.jsp">Sign in</a>
     </p>
 	
+
 </body>
 </html>

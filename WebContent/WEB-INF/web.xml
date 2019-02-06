@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
-  <display-name>simple login</display-name>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>simple login1</display-name>
   <welcome-file-list>
-    <welcome-file>home.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>FirstServlet</display-name>
+    <servlet-name>FirstServlet</servlet-name>
+    <servlet-class>com.test.login.FirstServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FirstServlet</servlet-name>
+    <url-pattern>/FirstServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginRegister</display-name>
+    <servlet-name>LoginRegister</servlet-name>
+    <servlet-class>login.submit.registration.LoginRegister</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginRegister</servlet-name>
+    <url-pattern>/loginRegister</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RegisterLogin</display-name>
+    <servlet-name>RegisterLogin</servlet-name>
+    <servlet-class>login.submit.registration.RegisterLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterLogin</servlet-name>
+    <url-pattern>/RegisterLogin</url-pattern>
+  </servlet-mapping>
 </web-app>
