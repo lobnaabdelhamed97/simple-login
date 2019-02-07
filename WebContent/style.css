@@ -4,7 +4,7 @@
   }
   body {
     font-size: 120%;
-   
+    background:skyblue;
   }
   
   .header {
@@ -22,7 +22,7 @@
     margin: 0px auto;
     padding: 20px;
     border: 1px solid blue;
-    background:transparent;
+    background:red;
     border-radius: 0px 0px 10px 10px;
   }
   .input-group {

@@ -7,8 +7,8 @@ public class Users {
 	private String DOB;
 	private String contact;
 	private String address;
+	private String department;
 
-	
 	public Users() {
 		super();
 	}
@@ -36,7 +36,7 @@ public class Users {
 	public String getUsername() {
 		return username;
 	}
-	public Users(String email, String password, String username, String dOB, String contact , String address) {
+	public Users(String email, String password, String username, String dOB, String contact , String address,String department) {
 		super();
 		this.email = email;
 		this.password = password;
@@ -44,7 +44,7 @@ public class Users {
 		this.DOB = dOB;
 		this.contact = contact;
 		this.address = address;
-
+this.department=department;
 	}
 	public String getDOB() {
 		return DOB;
@@ -57,6 +57,12 @@ public class Users {
 	}
 	public void setContact(String contact) {
 		this.contact = contact;
+	}
+	public String getDepartment() {
+		return department;
+	}
+	public void setDepartment(String department) {
+		this.department = department;
 	}
 	
 	

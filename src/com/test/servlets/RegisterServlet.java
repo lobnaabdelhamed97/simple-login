@@ -42,22 +42,23 @@ public class RegisterServlet extends HttpServlet {
 		String contact = request.getParameter("contact");
 		String address = request.getParameter("address");
 
-		//String dob = request.getParameter("DOB");
+		String dob = request.getParameter("DOB");
+		String department =request.getParameter("department");
 
-		//Users u =new Users(email,password,Uname,dob,contact,address) ;
-		request.setAttribute("message", email);
-		request.getRequestDispatcher("welcome.jsp").forward(request, response);
+		Users u =new Users(email,password,Uname,dob,contact,address,department) ;
+//		request.setAttribute("message", email);
+//		request.getRequestDispatcher("welcome.jsp").forward(request, response);
 
-//		int flag= uu.insertUser(u);
-//        if(flag!= 0)
-//        {
-//        	request.setAttribute("message", u.getEmail());
-//    		request.getRequestDispatcher("welcome.jsp").forward(request, response);
-//        }
-//        else {
-//        	request.getRequestDispatcher("login.jsp").forward(request, response);	
-//        }
-//		
+		int flag= uu.insertUser(u);
+        if(flag!= 0)
+        {
+        	request.setAttribute("message", u.getEmail());
+    		request.getRequestDispatcher("welcome.jsp").forward(request, response);
+        }
+        else {
+        	request.getRequestDispatcher("login.jsp").forward(request, response);	
+        }
+		
 
 
 

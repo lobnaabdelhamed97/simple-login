@@ -3,17 +3,11 @@
   <display-name>simple login1</display-name>
   <welcome-file-list>
     <welcome-file>home.jsp</welcome-file>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
     <description></description>
     <servlet-name>RegisterServlet</servlet-name>
-    <servlet-class>com.test.login.RegisterServlet</servlet-class>
+    <servlet-class>com.test.servlets.RegisterServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>RegisterServlet</servlet-name>
@@ -21,22 +15,14 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>LoginRegister</display-name>
-    <servlet-name>LoginRegister</servlet-name>
-    <servlet-class>login.submit.registration.LoginRegister</servlet-class>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>com.test.servlets.loginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>LoginRegister</servlet-name>
-    <url-pattern>/loginRegister</url-pattern>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/loginServlet</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>RegisterLogin</display-name>
-    <servlet-name>RegisterLogin</servlet-name>
-    <servlet-class>login.submit.registration.RegisterLogin</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>RegisterLogin</servlet-name>
-    <url-pattern>/RegisterLogin</url-pattern>
-  </servlet-mapping>
+  
+  
+  
 </web-app>

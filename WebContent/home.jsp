@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+    
+<!DOCTYPE html>
 <html>
 <head>
 
@@ -10,9 +11,10 @@
  
 <!-- Include JS File Here -->
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+<!--<script type="text/javascript" src="registeration.js"></script>-->
 
-<title>LoginRegister</title>
+<title>Register</title>
 
 </head>
 <div class="header">
@@ -22,7 +24,7 @@
 <div class="center">
           
 
-<form  action="RegisterServlet" method="post" >
+<form action ="RegisterServlet" method="post" >
 
 		<div class="input-group">
       <label>Username</label>	
@@ -40,10 +42,10 @@
       <label>Confirm password</label>
       <input type="password" name="cpassword" id="cpassword" placeholder="enter the same password">
     </div>
-    
+    <div class="input-group">
     <label>Birth date</label>
- <input type="date" name="DOB">
-    
+ <input type="date" name="DOB" id="DOB">
+    </div>
     <div class="input-group">
       <label>Address</label>
       <input type="text" name="address" id="address" placeholder="enter your address">
@@ -52,8 +54,9 @@
 			 <div class="input-group">
       <label>Contact Number</label>
       <input type="text" name="contact" id="contact"  placeholder="enter your mobile number">
-    </div>
-    
+   
+     </div>
+     <div class="input-group">
       <label>Department</label>
       <select name="department">
   <option value="production">Production</option>
@@ -63,9 +66,8 @@
     <option value="purchasing">Purchasing</option>
     <option value="hr">Human Resource Management</option>
 </select>
-			<br>
-			<br>
-			<br>
+		</div>
+		 	<br>
 			<br>
 			<br>
 			<input type="submit" class="btn" name="submit" id="submit_btn" value="submit">

@@ -11,9 +11,9 @@ public class ConnectionProvider implements  MyProvider{
 		
 		try{
 			//my connection driver
-			//Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 			//get the connection 
-			conn=(Connection)DriverManager.getConnection(connurl, email, pass);
+			conn=DriverManager.getConnection(connurl, username, pass);
 		if(conn!=null)
 			System.out.print("connection success");
 		}
